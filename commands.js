@@ -8,7 +8,6 @@ module.exports = {
 	'cube': cube,
 	'invite': invite,
 	'support': support,
-	'helpDM': helpDM,
 	'helphere': helphere
 }
 function help(msg) {
@@ -27,38 +26,6 @@ function help(msg) {
 				inline: true
 			}],
 		}})
-	}
-}
-
-function helpDM(msg){
-	if (msg.content = config.prefix + "helpDM") {
-		msg.author.createDM().then(channel => {
-			channel.send({embed: {
-			color: 0x00FF,
-			title: "HELP",
-			fields: [{
-				name: "Chaine d'Anacle_ YT",
-				value: `${config.prefix}anacle`,
-				inline: true
-			},
-			{
-				name: "Chaine de Cube_Lime YT",
-				value: `${config.prefix}cube`,
-				inline: true
-			},
-			{
-				name: "Invitation",
-				value: `${config.prefix}invite`,
-				inline: true
-			},
-			{
-				name: "Support",
-				value: `${config.prefix}support`,
-				inline: true
-			}],
-		}});
-	  }).catch(console.error);
-	  msg.channel.send(`${msg.author} vérifier vos messages priver`);
 	}
 }
 
