@@ -66,7 +66,10 @@ function cube(msg) {
 
 function invite(msg) {
 	if (msg.content = config.prefix + "invite") {
-		msg.channel.send(`${msg.author} ajoute moi sur ton serveur :wink:: https://discordapp.com/oauth2/authorize?client_id=478167931000193025&scope=bot&permissions=2146958847`);
+		msg.author.createDM().then(channel => {
+			channel.send(`${msg.author} ajoute moi sur ton serveur :wink:: https://discordapp.com/oauth2/authorize?client_id=478167931000193025&scope=bot&permissions=2146958847`);
+		}).catch(console.error);
+		msg.channel.send(`${msg.author} Vérifier vos messages priver`);
 	}
 }
 
