@@ -27,8 +27,7 @@ function help(msg) {
 			},
 			{
 				name: "Invitation",
-				value: `${config.prefix}invite`,
-				inline: true
+				value: `${config.prefix}invite`
 			},
 			{
 				name: "Support",
