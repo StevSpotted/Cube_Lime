@@ -25,7 +25,7 @@ bot.on('message', msg => {
 		return;
 	let cmd =msg.content.split(/\s+/)[0].slice(config.prefix.length).toLowerCase();
 	getCmdFunction(cmd)(msg);
-	if (msg.content = config.prefix + "helpDM") {
+		if (msg.content = config.prefix + "helpDM") {
 		msg.author.createDM().then(channel => {
 			channel.send({embed: {
 			color: 0x00FF,
@@ -54,6 +54,7 @@ bot.on('message', msg => {
 	  }).catch(console.error);
 	  msg.channel.send(`${msg.author} vérifier vos messages priver`);
 	}
+    }
 }
 
 bot.on('error', (e) => console.log(e));
