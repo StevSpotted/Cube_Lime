@@ -1,0 +1,16 @@
+{
+  "name": "bot_cube_lime_yt",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "steven50",
+  "license": "ISC",
+  "dependencies": {
+    "color": "^3.0.0",
+    "discord.js": "^11.4.0",
+    "prompt": "^1.0.0"
+  }
+}
