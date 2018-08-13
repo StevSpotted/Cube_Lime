@@ -73,6 +73,6 @@ function invite(msg) {
 function support(msg) {
 	if (msg.content = config.prefix + "support") {
 		msg.channel.send(`${msg.author} désoler mais le serveur support n'est pas encore disponible :pensive:`);
-		msg.channel.send("mais tu peut rejoindre la Team :grinning:: https://discord.gg/FGCTwBf");
+		msg.channel.send("mais tu peut rejoindre la Team :grinning:: https://discord.gg/pcfYDMK");
 	}
 }
