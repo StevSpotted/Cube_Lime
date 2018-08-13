@@ -31,8 +31,7 @@ function help(msg) {
 			},
 			{
 				name: "Support",
-				value: `${config.prefix}support`,
-				inline: true
+				value: `${config.prefix}support`
 			}],
 		}});
 	 	}
