@@ -37,6 +37,8 @@ function getCmdFunction(cmd){
 		'anacle': cmds.anacle,
 		'cube': cmds.cube,
 		'help': cmds.help,
+		'invite': cmds.invite,
+		'support': cmds.support
 	}
 	return COMMANDS[cmd] ? COMMANDS[cmd] : () => {};
 }
