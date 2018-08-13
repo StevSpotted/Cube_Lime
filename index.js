@@ -54,7 +54,7 @@ bot.on('message', msg => {
 	  }).catch(console.error);
 	  msg.channel.send(`${msg.author} vérifier vos messages priver`);
 	}
-    }
+    })
 }
 
 bot.on('error', (e) => console.log(e));
