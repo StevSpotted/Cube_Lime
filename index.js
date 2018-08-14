@@ -25,35 +25,6 @@ bot.on('message', msg => {
 		return;
 	let cmd =msg.content.split(/\s+/)[0].slice(config.prefix.length).toLowerCase();
 	getCmdFunction(cmd)(msg);
-	if (msg.content = config.prefix + "helpDM") {
-		msg.author.createDM().then(channel => {
-			channel.send({embed: {
-			color: 0x00FF,
-			title: "HELP",
-			fields: [{
-				name: "Chaine d'Anacle_ YT",
-				value: `${config.prefix}anacle`,
-				inline: true
-			},
-			{
-				name: "Chaine de Cube_Lime YT",
-				value: `${config.prefix}cube`,
-				inline: true
-			},
-			{
-				name: "Invitation",
-				value: `${config.prefix}invite`,
-				inline: true
-			},
-			{
-				name: "Support",
-				value: `${config.prefix}support`,
-				inline: true
-			}],
-		}});
-	  }).catch(console.error);
-	  msg.channel.send(`${msg.author} vérifier vos messages priver`);
-	}
  });
 
 bot.on('error', (e) => console.log(e));
