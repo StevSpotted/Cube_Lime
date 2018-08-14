@@ -127,7 +127,10 @@ function invite(msg) {
 
 function support(msg) {
 	if (msg.content = config.prefix + "support") {
-		msg.channel.send(`${msg.author} désoler mais le serveur support n'est pas encore disponible :pensive:`);
-		msg.channel.send("mais tu peut rejoindre la Team :grinning:: https://discord.gg/pcfYDMK");
+		msg.author.createDM().then(channel => {
+			channel.send(`${msg.author} désoler mais le serveur support n'est pas encore disponible :pensive:`);
+			channel.send("mais tu peut rejoindre la Team :grinning:: https://discord.gg/pcfYDMK");
+		}).catch(console.error);
+		msg.channel.send(`${msg.author} Vérifier vos messages priver`);
 	}
 }
