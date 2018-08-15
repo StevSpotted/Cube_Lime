@@ -39,6 +39,7 @@ function getCmdFunction(cmd){
 		'help': cmds.help,
 		'invite': cmds.invite,
 		'support': cmds.support,
+		'nude': cmds.nude,
 	}
 	return COMMANDS[cmd] ? COMMANDS[cmd] : () => {};
 }
