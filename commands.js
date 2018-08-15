@@ -12,36 +12,6 @@ module.exports = {
 	'helphere': helphere,
 }
 
-function DMhelp(msg) {
-	if (msg.content = config.prefix + "DMhelp") {
-		msg.author.createDM().then(channel => {
-		channel.send({embed: {
-			color: 0x00FF,
-			title: "HELP",
-			fields: [{
-				name: "Chaine d'Anacle_ YT",
-				value: `${config.prefix}anacle`,
-				inline: true
-			},
-			{
-				name: "Chaine de Cube_Lime YT",
-				value: `${config.prefix}cube`,
-				inline: true
-			},
-			{
-				name: "Invitation",
-				value: `${config.prefix}invite`
-			},
-			{
-				name: "Support",
-				value: `${config.prefix}support`
-			}],
-		}});
-		}).catch(console.error);
-
-	 }
-}
-
 function help(msg) {
 	if (msg.content = config.prefix + "help") {
 		msg.channel.send({embed: {
@@ -133,4 +103,34 @@ function support(msg) {
 		}).catch(console.error);
 		msg.channel.send(`${msg.author} Vérifier vos messages priver`);
 	}
+}
+
+function DMhelp(msg) {
+	if (msg.content = config.prefix + "DMhelp") {
+		msg.author.createDM().then(channel => {
+		channel.send({embed: {
+			color: 0x00FF,
+			title: "HELP",
+			fields: [{
+				name: "Chaine d'Anacle_ YT",
+				value: `${config.prefix}anacle`,
+				inline: true
+			},
+			{
+				name: "Chaine de Cube_Lime YT",
+				value: `${config.prefix}cube`,
+				inline: true
+			},
+			{
+				name: "Invitation",
+				value: `${config.prefix}invite`
+			},
+			{
+				name: "Support",
+				value: `${config.prefix}support`
+			}],
+		}});
+		}).catch(console.error);
+
+	 }
 }
