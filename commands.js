@@ -8,6 +8,7 @@ module.exports = {
 	'cube': cube,
 	'invite': invite,
 	'support': support,
+	'nude': nude,
 }
 
 
@@ -81,5 +82,15 @@ function support(msg) {
 			channel.send("mais tu peut rejoindre la Team :grinning:: https://discord.gg/pcfYDMK");
 		}).catch(console.error);
 		msg.channel.send(`${msg.author} Vérifier vos messages priver`);
+	}
+}
+
+function nude(msg) {
+	if (msg.content = config.prefix + "nude") {
+		msg.author.createDM().then(channel => {
+			channel.send(`${msg.author} voici votre nude :wink:`);
+			channel.send(`https://i.ytimg.com/vi/qvKrI0lv5ts/maxresdefault.jpg`);
+		})
+		msg.channel.send(`${msg.author} vérifier vos messages votre nude à étais envoyer :wink:`);
 	}
 }
