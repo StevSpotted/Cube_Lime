@@ -34,13 +34,11 @@ bot.login(process.env.token);
 
 function getCmdFunction(cmd){
 	const COMMANDS = {
-		'DMhelp': cmds.DMhelp,
 		'anacle': cmds.anacle,
 		'cube': cmds.cube,
 		'help': cmds.help,
 		'invite': cmds.invite,
 		'support': cmds.support,
-		'helphere': cmds.helphere
 	}
 	return COMMANDS[cmd] ? COMMANDS[cmd] : () => {};
 }
