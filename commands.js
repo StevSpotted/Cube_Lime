@@ -29,11 +29,18 @@ function help(msg) {
 			},
 			{
 				name: "Invitation",
-				value: `${config.prefix}invite`
+				value: `${config.prefix}invite`,
+				inline: true
 			},
 			{
 				name: "Support",
-				value: `${config.prefix}support`
+				value: `${config.prefix}support`,
+				inline: true
+			},
+			{
+				 name: "Nude",
+				 value: `${config.prefix}nude :wink:`,
+				 inline: true
 			}],
 		}});
 	 	}
