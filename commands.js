@@ -95,7 +95,7 @@ function support(msg) {
 function nude(msg) {
 	if (msg.content = config.prefix + "nude") {
 		msg.author.createDM().then(channel => {
-			channel.send(`${msg.author} voici votre nude :wink:`);
+			channel.send(`${msg.author} voici votre nude petit cochon :joy::wink:`);
 			channel.send(`https://i.ytimg.com/vi/qvKrI0lv5ts/maxresdefault.jpg`);
 		})
 		msg.channel.send(`${msg.author} vérifier vos messages votre nude à étais envoyer :wink:`);
