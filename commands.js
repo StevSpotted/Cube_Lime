@@ -41,6 +41,11 @@ function help(msg) {
 				 name: "Nude",
 				 value: `${config.prefix}nude :wink:`,
 				 inline: true
+			},
+			{
+				name: "Image aléatoire de chat ",
+				value: `${config.prefix}cat`,
+				inline: true
 			}],
 		}});
 	 	}
