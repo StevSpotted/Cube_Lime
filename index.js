@@ -4,6 +4,7 @@ const config = require("./config.json");
 const tool = require("./tool.js");
 const cmds = require("./commands.js");
 const prompt = require('prompt');
+const { get } = require("snekfetch");
 const colors = require("colors");
 prompt.message = "";
 prompt.colors = '';
@@ -18,6 +19,19 @@ bot.on('ready',() => {
 });
 
 bot.on('message', msg => {
+	
+		if(msg.content.startsWith(config.prefix + 'cat')) {
+		try {
+			get('https://aws.random.cat/meow').then(res => {
+				const embed = new Discord.RichEmbed()
+				.setImage(res.body.file)
+				return msg.channel.send({embed});
+			});
+		} catch(err) {
+			return msg.channel.send(error.stack);
+		}
+	}
+	
 	if(msg.author.bot || msg.channel.type != 'text')
 		return;
 
