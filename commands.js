@@ -113,7 +113,7 @@ function nude(msg) {
 }
 
 function avatar(msg) {
-	if (msg.content = config.prefix + 'avatar') {
+	if (msg.content = config.prefix + "avatar") {
 		msg.channel.send(msg.author.avatarURL);
 	}
 }
