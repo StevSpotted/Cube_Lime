@@ -9,6 +9,7 @@ module.exports = {
 	'invite': invite,
 	'support': support,
 	'nude': nude,
+	'avatar': avatar,
 }
 
 
@@ -46,6 +47,10 @@ function help(msg) {
 				name: "Image aléatoire de chat ",
 				value: `${config.prefix}cat`,
 				inline: true
+			},
+			{
+				name: "Avatar",
+				value: `${config.prefix}avatar`
 			}],
 		}});
 	 	}
@@ -104,5 +109,11 @@ function nude(msg) {
 			channel.send(`https://i.ytimg.com/vi/qvKrI0lv5ts/maxresdefault.jpg`);
 		})
 		msg.channel.send(`${msg.author} vérifier vos messages votre nude à étais envoyer :wink:`);
+	}
+}
+
+function avatar(msg) {
+	if (msg.content = config.prefix + 'avatar') {
+		msg.channel.send(msg.author.avatarURL);
 	}
 }
