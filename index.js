@@ -11,6 +11,15 @@ prompt.colors = '';
 
 const bot = new Discord.Client();
 
+let statuses = [`${config.prefix}help`, `regarder des photos de chat`]
+bot.on('ready', () => {
+	setInterval(function() {
+		let status = statuses[Math.floor(Math.random()*statuses.length)];
+
+		bot.user.setPresence({ game: { name: status }, status: 'dnd'});
+	}, 10000)
+});
+
 bot.on('ready',() => {
 	console.log(`${bot.user.username} se lance`);
 	console.log(`le bot se lance sur ${bot.guilds.size} server`);
