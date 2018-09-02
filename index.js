@@ -18,13 +18,12 @@ bot.on('ready', () => {
 
 		bot.user.setPresence({ game: { name: status }, status: 'dnd'});
 	}, 10000)
+	bot.user.setActivity(`Cube_Lime YT`, {type:'WATCHING'});
 });
 
 bot.on('ready',() => {
 	console.log(`${bot.user.username} se lance`);
 	console.log(`le bot se lance sur ${bot.guilds.size} server`);
-
-	bot.user.setGame(config.prefix + 'help');
 });
 
 bot.on('message', msg => {
