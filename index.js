@@ -12,7 +12,7 @@ prompt.colors = '';
 const bot = new Discord.Client();
 
 let statuses = [`${config.prefix}help`, `regarder des photos de chat`]
-bot.on('ready', () => {
+bot.on('ready',() => {
 	setInterval(function() {
 		let status = statuses[Math.floor(Math.random()*statuses.length)];
 
